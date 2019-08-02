@@ -1,0 +1,71 @@
+<template>
+    <v-app>
+    <v-content>
+      <v-layout justify-center>
+        <v-flex xs12 sm10 md8 lg4>
+          <h1>aour</h1>
+          <h2 class="display-1">Print from anywhere</h2>
+          <v-card ref="form" class="sheetrad">
+            <v-card-text>
+              <v-text-field
+                color="#000000"
+                ref="name"
+                outlined
+                rounded
+                v-model="name"
+                label="Full Name"
+                required
+              ></v-text-field>
+              <v-text-field color="#000000" ref="email" outlined rounded v-model="email" label="Email" required></v-text-field>
+              <v-text-field color="#000000" ref="password" outlined rounded v-model="password" type="password" label="Password" required></v-text-field>
+              <v-text-field color="#000000" ref="ph" outlined rounded v-model.number="phone" label="Ph. Number" required></v-text-field>
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <h3>Existing user?</h3>
+              <router-link to="/login"><v-btn color="grey darken-3 white--text" rounded>Login</v-btn></router-link>
+              <v-spacer></v-spacer>
+              <v-btn rounded color="grey darken-3 white--text" @click="submit">Sign Up</v-btn>
+            </v-card-actions>
+          </v-card>
+          <v-layout justify-center>
+          <v-btn class="google" light rounded>Continue with Google</v-btn>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-content>
+    </v-app>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+h1,
+h2 {
+  size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.signup {
+  background: white;
+  margin: 2em;
+}
+.in{
+  border-color: lightgray;
+}
+.google{
+  justify-content: center;
+  background-color: cornsilk;
+  margin: 20px;
+  border-color: black;
+}
+.sheetrad {
+  border-radius: 50px;
+  padding: 40px;
+  margin: 20px;
+}
+</style>
