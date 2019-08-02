@@ -38,8 +38,30 @@
 </template>
 
 <script>
-export default {
+import firebase from 'firebase'
 
+export default {
+    name: 'signup',
+    data() {
+        return {
+            name: '',
+            email: '',
+            password: '',
+            phone: ''
+        }
+    },
+    methods: {
+        submit: function() {
+            firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then( 
+                function(user) {
+                    alert('Your account is created')
+                },
+                function(err) {
+                    alert(err.message)
+                }
+            )
+        }
+    }
 }
 </script>
 

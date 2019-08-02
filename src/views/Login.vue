@@ -24,8 +24,23 @@
 </template>
 
 <script>
-export default {
+import firebase from 'firebase'
 
+export default {
+    name: 'login',
+    data() {
+        return {
+            email: '',
+            password: '',
+        }
+    },
+    methods: {
+        login: function() {
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=> {
+                this.$router.replace('dashboard')
+            })
+        }
+    }
 }
 </script>
 
