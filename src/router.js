@@ -15,7 +15,7 @@ const router = new Router({
       component: Signup
     },
     {
-      path: '/login',
+      path: '*',
       name: 'login',
       component: Login
     },
@@ -35,9 +35,10 @@ router.beforeEach((to, from, next) => {
   const currentUser = firebase.auth().currentUser
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
 
-  if( requiresAuth && !currentUser ) next ('login')
-  else if( !requiresAuth && currentUser ) next ('dashboard')
+  if ( requiresAuth && !currentUser ) next ('login') 
+  else if ( !requiresAuth && currentUser ) next ( 'dashboard' )
   else next()
 })
+
 
 export default router

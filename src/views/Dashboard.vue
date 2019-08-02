@@ -9,14 +9,16 @@
         <v-btn flat @click="logout">Log Out</v-btn>
       </v-toolbar-items>
     </v-app-bar>
+    <v-content>
      <v-layout align-center justify-center>
        <v-flex xs12 sm10 md8 lg4>
      <v-text-field outline label="Location for nearby stores" append-icon="place"></v-text-field>
        </v-flex>
     </v-layout>
     <v-layout align-center justify-center>
-      <v-btn class="search" color="#242424" round>Upload</v-btn>
+      <v-btn class="search" color="#242424" rounded>Upload</v-btn>
     </v-layout>
+    </v-content>
   </v-app>
 </template>
 
@@ -25,7 +27,7 @@
 import firebase from "firebase";
 
 export default {
-  name: "Dashboard",
+  name: "dashboard",
   methods: {
     logout: function() {
       firebase

@@ -12,7 +12,7 @@
             </v-card-text>
             <v-divider class="mt-5"></v-divider>
             <v-card-actions>
-              <router-link to="/"><v-btn color="grey darken-3 white--text" rounded>Sign Up</v-btn></router-link>
+              <router-link to="/"><v-btn color="grey darken-3 white--text" rounded>Go back</v-btn></router-link>
               <v-spacer></v-spacer>
               <v-btn color="grey darken-3 white--text" rounded @click="login">Login</v-btn>
             </v-card-actions>
@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         login: function() {
-            firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=> {
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(() => {
                 this.$router.replace('dashboard')
             })
         }
