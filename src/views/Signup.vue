@@ -41,7 +41,7 @@
 import firebase from 'firebase'
 
 export default {
-    name: 'signup',
+    name: 'Signup',
     data() {
         return {
             name: '',

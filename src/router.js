@@ -11,17 +11,17 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'signup',
+      name: 'Signup',
       component: Signup
     },
     {
       path: '*',
-      name: 'login',
+      name: 'Login',
       component: Login
     },
     {
       path: '/dashboard',
-      name: 'dashboard',
+      name: 'Dashboard',
       component: Dashboard,
       meta: {
         requiresAuth: true
@@ -36,7 +36,7 @@ router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
 
   if ( requiresAuth && !currentUser ) next ('login') 
-  else if ( !requiresAuth && currentUser ) next ( 'dashboard' )
+  else if ( !requiresAuth && currentUser ) next ('dashboard')
   else next()
 })
 
