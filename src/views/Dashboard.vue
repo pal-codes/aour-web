@@ -1,11 +1,10 @@
 <template>
   <v-app>
     <h1>Hello</h1>
-    <h2>This is a test run 
-    </h2>
-    <v-content> 
+    <h2>This is a test run</h2>
+    <v-content>
       <v-app-bar>
-        welcome to aour 
+        welcome to aour
       </v-app-bar>
     </v-content>
   </v-app>
