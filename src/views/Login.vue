@@ -12,9 +12,9 @@
             </v-card-text>
             <v-divider class="mt-5"></v-divider>
             <v-card-actions>
-              <router-link to="/"><v-btn color="grey darken-3 white--text" rounded>Go back</v-btn></router-link>
+              <router-link to="/"><v-btn large outlined rounded>Go back</v-btn></router-link>
               <v-spacer></v-spacer>
-              <v-btn color="grey darken-3 white--text" rounded @click="login">Login</v-btn>
+              <v-btn dark large rounded @click="login">Login</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>

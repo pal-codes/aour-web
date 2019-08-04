@@ -1,5 +1,5 @@
 <template>
-<v-app>
+    <v-app>
     <v-toolbar dark absolute>
     <v-toolbar-title>aour</v-toolbar-title>
     <v-spacer></v-spacer>
@@ -20,34 +20,24 @@
 </v-app>
 </template>
 
-
 <script>
-import firebase from "firebase";
+import firebase from 'firebase'
 
 export default {
-  name: "Dashboard",
-  methods: {
-    logout: function() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          this.$router.replace("login");
-        });
+    name: 'Preview',
+    methods: {
+        logout: {
+            function () {
+                firebase.auth().signOut
+                .then(() => {
+                    this.$router('/preview')
+                })
+            }
+        }
     }
-  }
-};
+}
 </script>
 
+<style>
 
-
-<style scoped>
-.search{
-  padding-bottom: 40px;
-}
 </style>
-
-
-// :hover{
-//     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-// };

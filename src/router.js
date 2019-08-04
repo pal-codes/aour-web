@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Signup from './views/Signup.vue'
 import Login from './views/Login.vue'
 import Dashboard from './views/Dashboard.vue'
+import Preview from './views/Preview.vue'
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -23,6 +24,14 @@ const router = new Router({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/preview',
+      name: 'Preview',
+      component: Preview,
       meta: {
         requiresAuth: true
       }

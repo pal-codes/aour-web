@@ -20,17 +20,17 @@
               <v-text-field color="#000000" ref="password" outlined rounded v-model="password" type="password" label="Password" required></v-text-field>
               <v-text-field color="#000000" ref="ph" outlined rounded v-model.number="phone" label="Ph. Number" required></v-text-field>
             </v-card-text>
-            <v-divider></v-divider>
             <v-card-actions>
               <h3>Existing user?</h3>
-              <router-link to="/login"><v-btn color="grey darken-3 white--text" rounded>Login</v-btn></router-link>
+              <router-link to="/login"><v-btn dark large rounded>Login</v-btn></router-link>
               <v-spacer></v-spacer>
-              <v-btn rounded color="grey darken-3 white--text" @click="submit">Sign Up</v-btn>
+              <v-btn rounded dark large @click="submit">Sign Up</v-btn>
             </v-card-actions>
-          </v-card>
-          <v-layout justify-center>
-          <v-btn class="google" light rounded>Continue with Google</v-btn>
+            <v-divider></v-divider>
+            <v-layout justify-center>
+          <v-btn class="google" light rounded x-large elevation="8">Continue with Google</v-btn>
           </v-layout>
+          </v-card>
         </v-flex>
       </v-layout>
     </v-content>
@@ -81,13 +81,11 @@ h2 {
 }
 .google{
   justify-content: center;
-  background-color: cornsilk;
-  margin: 20px;
-  border-color: black;
+  margin-top: 20px;
 }
 .sheetrad {
   border-radius: 50px;
-  padding: 40px;
+  padding: 30px;
   margin: 20px;
 }
 </style>
