@@ -1,13 +1,15 @@
 <template>
-  <v-app>
-    <h1>Hello</h1>
-    <h2>This is a test run</h2>
-    <v-content>
-      <v-app-bar>
-        welcome to aour
-      </v-app-bar>
-    </v-content>
-  </v-app>
+<v-app>
+    <v-toolbar dark absolute>
+    <v-toolbar-title>aour</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-toolbar-items>
+      <v-btn text>Home</v-btn>
+      <v-btn text>My Orders</v-btn>
+      <v-btn text @click="logout">Log out</v-btn>
+    </v-toolbar-items>
+  </v-toolbar>
+</v-app>
 </template>
 
 
