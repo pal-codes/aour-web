@@ -15,7 +15,7 @@
     </v-flex>
   </v-layout>
   <v-layout align-start justify-center>
-      <v-btn x-large dark elevation="7" rounded>Upload</v-btn>
+      <router-link to="/preview"><v-btn x-large dark elevation="7" rounded>Upload</v-btn></router-link>
     </v-layout>
 </v-app>
 </template>
