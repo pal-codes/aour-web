@@ -11,14 +11,13 @@
   </v-toolbar>
     <v-layout align-content-space-around justify-start row>
       <v-flex class="view" xs12 sm12 md6 lg3 xl3 d-flex>
+        <v-text-field
+        solo
+        label="No of copies"
+        ></v-text-field>
         <v-select
           :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-        <v-select
-          :items="items"
-          label="Solo field"
+          label="Paper Size"
           solo
         ></v-select>
       </v-flex>
@@ -27,26 +26,12 @@
       <v-flex class="view" xs12 sm12 md6 lg3 xl3 d-flex>
         <v-select
           :items="items"
-          label="Solo field"
+          label="Page Type"
           solo
         ></v-select>
         <v-select
           :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-      </v-flex>
-    </v-layout>
-    <v-layout align-content-space-around justify-start row>
-      <v-flex class="view" xs12 sm12 md6 lg3 xl3 d-flex>
-        <v-select
-          :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-        <v-select
-          :items="items"
-          label="Solo field"
+          label="Two Sided"
           solo
         ></v-select>
       </v-flex>
@@ -55,12 +40,26 @@
       <v-flex class="view" xs12 sm12 md6 lg3 xl3 d-flex>
         <v-select
           :items="items"
-          label="Solo field"
+          label="Color"
           solo
         ></v-select>
         <v-select
           :items="items"
-          label="Solo field"
+          label="Pages"
+          solo
+        ></v-select>
+      </v-flex>
+    </v-layout>
+    <v-layout align-content-space-around justify-start row>
+      <v-flex class="view" xs12 sm12 md6 lg3 xl3 d-flex>
+        <v-select
+          :items="items"
+          label="Orientation"
+          solo
+        ></v-select>
+        <v-select
+          :items="items"
+          label="Photos on one page"
           solo
         ></v-select>
       </v-flex>
