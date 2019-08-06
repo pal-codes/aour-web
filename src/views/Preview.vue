@@ -82,7 +82,7 @@ export default {
             function () {
                 firebase.auth().signOut
                 .then(() => {
-                    this.$router('/preview')
+                    this.$router('/login')
                 })
             }
         }
